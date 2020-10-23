@@ -1,0 +1,23 @@
+{% extends "profiles/base.html" %}
+{% load static %}
+{% block content %}
+<div class="post-posting-section">
+    <div class="posting-detail-card common-card">
+        <div class="posting-detail-card__info-wrap">
+            <p class="posting-detail-card__title">
+                {{ post.post_title }}
+            </p>
+            <p class="posting-detail-card__info">
+                <span class="posting-detail-card__info-text">{{ post.post_author }}</span>
+                <span class="posting-detail-card__info-text">{{ post.post_date | date:"Y-m-d H:i" }}</span>
+            </p>
+        </div>
+        <div class="posting-detail-card__cont">
+            {{ post.post_content | striptags }}
+        </div>
+    </div>
+    <div>
+        <a href="/profiles/post">목록으로</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "profiles/base.html" %}
+{% load static %}
+{% block content %}
+<div class="post-posting-section">
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form }}
+            <input type="submit" name="post_submit" value="save"> 
+        </form>
+    </div>
+</div>
+{% endblock %}

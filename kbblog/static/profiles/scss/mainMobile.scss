@@ -1,0 +1,53 @@
+@include breakPoint(mobile) {
+    .header {
+        .gnb {
+            &__nav {
+                padding: 0 10px;
+                
+                &-inner {
+                    padding: 0;
+                }
+                &-left {
+                    font-size: 0;
+                }
+            }
+        }
+    }
+    .content {
+        .main-top {
+            padding-bottom: 100px;
+            &__profile {
+                #{$forward-float}: 0;
+                top: 50%;
+                transform: translateY(-30%);
+                width: 100%;
+                text-align: center;
+
+                &-info {
+                    padding-top: 10px;
+
+                    &-detail {
+                        &--name {
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                &-image {
+                    transition: none;
+                    margin: 0 auto;
+                    width: 150px;
+                    height: 150px;
+
+                    &:hover {
+                        transform: none;
+                        box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.8);
+                    }
+                }
+            }
+            &__background-image {
+                height: 200px;
+            }
+        }
+    }
+}

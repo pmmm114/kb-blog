@@ -1,0 +1,12 @@
+@import './variable';
+@import './breakPoint';
+@import './filePath';
+@import './mixin';
+
+/*
+    실제 스타일 파일
+	commonGlobal: global
+	commonMobile: mobile
+*/
+@import './commonGlobal';
+@import './commonMobile';

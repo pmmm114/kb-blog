@@ -1,0 +1,32 @@
+//breakpoint
+$mobile-screen: 768px;
+$pc-screen: 1024px;
+
+//rtl 
+$forward-float: left;
+$reverse-float: right;
+
+$forward-direction: ltr;
+$reverse-direction: rtl;
+
+//font추가
+@font-face {
+	font-family: 'InfinitySans-RegularA1';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+	font-weight: normal;
+	font-style: normal; 
+}
+
+//color
+$common-skyblue-1: #83B6F2;
+$common-black-1: #333;
+$common-white-1: #fff;
+
+$font-black-1: #333;
+
+$background-blue-1: #C5C5E6;
+$background-blue-2: #72D1FF;
+$background-blue-3: #287DC2;
+
+$border-black-1: #333;
+

@@ -1,0 +1,198 @@
+.post-posting-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.posting {
+    $posting: &;
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    &__recently {
+        &-list {
+            font-size: 0;
+        }
+        &-item {
+            display: inline-block;
+            font-size: 0;
+            width: 22%;
+            height: 200px;
+            padding: 15px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: #{$common-white-1};
+            border-radius: 2px;
+            box-shadow: 4px 3px 5px 2px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            
+            &-info {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-text-wrap {
+                display: inline-block;
+                width: 100%;
+                margin-top: 10px;
+            }
+            &-inner {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: #{$font-black-1};
+            }
+            &-img {
+                display: inline-block;
+                width: 100%;
+                height: 50%;
+                margin-top: 5px;
+            }
+            &-title {
+                display: inline-block;
+                width: 100%;
+                font-size: 18px;
+            }
+            &-desc {
+                display: inline-block;
+                width: 100%;
+                font-size: 18px;
+            }
+            &-date {
+                display: inline-block;
+                width: 100%;
+                font-size: 18px;
+            }
+            & + #{$posting}__recently-item {
+                margin-left: 4%;
+            }
+        }
+    }
+    &__list {
+        font-size: 0;
+    }
+    &__item {
+        display: inline-block;
+        font-size: 0;
+        width: 22%;
+        height: 200px;
+        padding: 15px;
+        box-sizing: border-box;
+        vertical-align: top;
+        background-color: #{$common-white-1};
+        border-radius: 2px;
+        box-shadow: 4px 3px 5px 2px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-text-wrap {
+            display: inline-block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        &-inner {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #{$font-black-1};
+        }
+        
+        &-img {
+            display: inline-block;
+            width: 100%;
+            height: 50%;
+            margin-top: 5px;
+        }
+        &-title {
+            display: inline-block;
+            width: 100%;
+            font-size: 18px;
+        }
+        &-desc {
+            display: inline-block;
+            width: 100%;
+            font-size: 18px;
+        }
+        &-date {
+            display: inline-block;
+            width: 100%;
+            font-size: 18px;
+        }
+        & + #{$posting}__item {
+            margin-left: 4%;
+        }
+
+        &:nth-child(5n) {
+            margin-left: 0;
+        }
+    }
+    &__pagination {
+        margin-top: 20px;
+        text-align: center;
+        &-anchor {
+            transition: background-color 0.2s;
+            display: inline-block;
+            width: 30px;
+            line-height: 30px;
+            border-radius: 20px;
+            background-color: #{$background-blue-2};
+            color: #{$common-white-1};
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #{$background-blue-3};
+            }
+        }
+    }
+
+    & + & {
+        margin-top: 60px;
+    }
+}
+
+.posting-detail-card {
+    $posting-detail-card: &;
+
+    background-color: rgba(0, 0, 0, 0.02);
+    &__title {
+        font-size: 24px;
+    }
+    &__info {
+        margin-top: 12px;
+        font-size: 0;
+        &-wrap {
+            padding: 30px 30px;
+        }
+
+        &-text {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            & + #{$posting-detail-card}__info-text {
+                margin-left: 12px;
+                padding-left: 12px;
+                &:before {
+                    position: absolute;
+                    display: inline-block;
+                    content: '';
+                    background-color: #{$font-black-1};
+                    left: 0;
+                    height: 16px;
+                    width: 1px;
+                }
+            }
+        }
+    }
+    &__cont {
+        margin-top: 30px;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,9 @@
+@mixin pc-convertor($property, $pc-pixel) {
+    #{$property}: $pc-pixel*1px;
+    #{$property}: $pc-pixel*100/1440*1vw;
+}
+
+@mixin mobile-convertor($property, $mo-pixel) {
+    #{$property}: $mo-pixel/360*768*1px;
+    #{$property}: $mo-pixel*100/360*1vw;
+}

@@ -1,0 +1,13 @@
+{% extends "profiles/base.html" %}
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+{{user}}<br>
+<a href="/profiles/logout">Google+</a><br>
+{{user.id}}<br>
+{{user.username}} 님이 로그인중
+{% else %}
+로그인이 필요합니다
+{% endif %}
+{% endblock %}

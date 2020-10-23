@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "==2.2.15"
+social-auth-app-django = "*"
+libsass = "*"
+django-compressor = "*"
+django-sass-processor = "*"
+mysqlclient = "*"
+django-ckeditor = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+start = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py runserver 8000"
+makemigrations = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py makemigrations"
+migrate = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py migrate"
+reset = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py migrate --fake profiles zero"
+showmigrations = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py showmigrations"

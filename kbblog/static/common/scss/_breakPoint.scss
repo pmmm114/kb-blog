@@ -1,0 +1,17 @@
+@mixin breakPoint($breakPointType) {
+  @if $breakPointType == desktop {
+    @media screen and(min-width: $pc-screen)  {
+      @content;
+    }
+  }
+  @else if $breakPointType == tablet {
+    @media screen and(max-width: $pc-screen - 1) {
+      @content;
+    }
+  }
+  @else if $breakPointType == mobile {
+    @media screen and(max-width: $mobile-screen) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,363 @@
+{% extends "profiles/base.html" %}
+{% load static %}
+{% block content %}
+<section class="main-top">
+    <div class="main-top__profile">
+        <div class="main-top__profile-image" id="start">
+            <img src="{% static 'common/images/profile.jpg' %}" alt="profile image">
+        </div>
+        <div class="main-top__profile-info">
+            <h2 class="main-top__profile-info-detail main-top__profile-info-detail--name">이강복 (Kangbok Lee)</h2>
+            <!-- <span class="main-top__profile-info-detail main-top__profile-info-detail--birth">birth</span>
+            <span class="main-top__profile-info-detail main-top__profile-info-detail--email">email</span> -->
+            <!-- <span class="main-top__profile-info-detail main-top__profile-info-detail--job">job</span> -->
+        </div>
+    </div>
+    <div class="main-top__background-image">
+        <img src="{% static 'common/images/background.jpg' %}" alt="profile's background image">
+    </div>
+</section>
+<div class="main-middle">
+    <section class="profile-section">
+        <div class="profile-category">
+            <div class="profile-category__title-wrap">
+                <p class="profile-category__title">자기소개</p>
+                <span class="progress-bar progress-bar--thick"></span>
+            </div>
+            <div class="profile-category__content">
+                <p class="profile-category__content-main">대학에선 주요 과목으로 C, JAVA, C++, DB(Oracle, MySQL)를 배웠고, blockchain(hyperledger fabric), Machine Learning에 관심이 있어 공부하였습니다. 최근 업무 기술 스택 이외의 관심있는 기술은 Svelte, React, Typescript, Django입니다.</p>
+                <ul class="profile-category__content-list">
+                    <li class="profile-category__content-item profile-category__content-item--hyphen">새로운 기술에 대한 공부와 도전을 즐기며, 이해하지 못하고 모른다면 집요하게 물고 늘어지는 성격이 있어 빠르게 배우고 적응합니다.</li>
+                    <li class="profile-category__content-item profile-category__content-item--hyphen">동료들과 이야기하며 지식을 공유하고, 협업을 통해 함께 성장하는 것을 목표로 합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="profile-section">
+        <div class="profile-category__title-wrap">
+            <p class="profile-category__title">경력사항</p>
+            <span class="progress-bar progress-bar--thick"></span>
+        </div>
+        <div class="profile-category__content">
+            <div class="timeline timeline--cross profile-section__timeline">
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2016.03 ~ 2019.02
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                인하공업전문대학교 졸업
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                컴퓨터시스템과
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2019.04 ~
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                주식회사 디앤디랩
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                Lab팀/사원
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2019.04 ~ 2019.09
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                아이나비 브랜드, 몰 페이지 통합 및 Renewal
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : JS(jQuery, ES5), HTML, CSS3, JSP 
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : 브랜드, 몰페이지 통합 및 Renewal을 통한 UI/UX개선
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                브랜드, 몰페이지 PC/MOB 퍼블리싱
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                브랜드, 몰페이지 메인 UX개선, 인터랙션 개발
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                상품상세, 장바구니 스크립트 작업
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="timeline__item-desc-bubble-image">
+                                <a href="http://www.inavi.com/" target="_blank">
+                                    <img src="{% static 'profiles/images/inavi.jpg' %}" alt="웹 사이트 썸네일">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2019.06 ~ 2019.08
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                SAMSUNG Search Renewal Project 
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : JS(jQuery, ES5), HTML, Sass 
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : 삼성닷컴 검색페이지 UI/UX 개선, GNB 2019 Ver.
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                웹표준, 웹접근성을 고려한 프론트엔드 구현
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                다국어 지원(RTL)
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                검색 필터링 영역 작업
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                반응형 퍼블리싱 작업
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="timeline__item-desc-bubble-image">
+                                <a href="https://www.samsung.com/sec/search/?searchvalue=%EA%B0%A4%EB%9F%AD%EC%8B%9C%20S20%205G" target="_blank">
+                                    <img src="{% static 'profiles/images/samsung.jpg' %}" alt="웹 사이트 썸네일">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2019.07 ~ 
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                SAMSUNG BESPOKE Renewal Project 
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : JS(jQeury, ES5), HTML, Sass, gulp, trimpath 
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : 삼성닷컴 BESPOKE 제작소 UI/UX 개선
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                3D 영역에서 필요한 제품 데이터 정제, 관리
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                데이터를 노출시켜 줄 템플릿을 trimpath로 개발
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                웹표준, 웹접근성(스크린 리더기, WAI-ARIA)을 고려한 프론트엔드 구현
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                다국어 지원(RTL)
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                반응형 퍼블리싱 작업
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">  
+                        <span class="timeline__item-title-text">
+                            2019.10 ~ 2020.04
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                KFSC Web Ordering System Project 
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : Vue.js(2), Vuex, JS(ES5+), Vuetify, Sass 
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : KFSC 기존 레거시 코드(ASP)를 JAVA, Vue.js로 Migration
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                공통 컴포넌트와 컴포넌트 내부 인터랙션 개발
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                주문상세 및 품목 상세 데이터 처리
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                사업자별(중앙관리자, 매장관리자, 3자 매장) 페이지 세분화
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2019.12 ~ 2020.03
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                SAMSUNG Review Dashboard Project 
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : Vue.js(2), Vuex, buefy, Sass, apexchart.js 
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : 삼성 리뷰데이터 대시보드 사이트에서 전 국가 리뷰데이터 통계를 시각화하는 기능을 추가 및 개선
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                RESTful API를 연동하고, 서버에서 받은 데이터를 통해 받은 데이터를 관리하고 chart를 이용하여 시각화
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                Admin, User 페이지 작업
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item" opacity-hidden scroll-animation="vertical" animation-direction="BTT">
+                    <div class="timeline__item-title">
+                        <span class="timeline__item-title-text">
+                            2020.7 ~ 2020.10
+                        </span>
+                    </div>
+                    <div class="timeline__item-divider">
+                        <div class="timeline__item-divider-dot">
+                        </div>
+                    </div>
+                    <div class="timeline__item-desc">
+                        <div class="timeline__item-desc-bubble">
+                            <p class="timeline__item-desc-bubble-title">
+                                SKINFOOD Renewal Project  
+                            </p>
+                            <div class="timeline__item-desc-bubble-desc">
+                                <ul class="timeline__item-desc-bubble-desc-list">
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        환경 : PHP, JS(jQuery, ES5), HTML, CSS3, Template Underscore
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        개요 : 스킨푸드 브랜드, 몰 페이지 사이트의 UX/UI 수정 및 신규기능 추가
+                                    </li>
+                                    <li class="timeline__item-desc-bubble-desc-item">
+                                        <p>업무</p>
+                                        <ul class="timeline__item-desc-bubble-desc-list timeline__item-desc-bubble-desc-list--inner">
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                PC/MOB 퍼블리싱
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                최근 본 상품, 상품상세 scrollspy 등 UX 개선
+                                            </li>
+                                            <li class="timeline__item-desc-bubble-desc-item timeline__item-desc-bubble-desc-item--hyphen">
+                                                필터셋, 결제상품 금액계산 등 세부적인 스크립트 작업
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="timeline__item-desc-bubble-image">
+                                <a href="https://www.samsung.com/sec/search/?searchvalue=%EA%B0%A4%EB%9F%AD%EC%8B%9C%20S20%205G" target="_blank">
+                                    <img src="{% static 'profiles/images/skinfood.jpg' %}" alt="스킨푸드 썸네일">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

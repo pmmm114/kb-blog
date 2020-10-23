@@ -1,0 +1,10 @@
+// @import 'common/scss/variable';
+// @import 'common/scss/breakPoint';
+// @import 'common/scss/filePath';
+
+@import '../../common/scss/common.scss';
+/*
+    실제 스타일 파일
+    login_global: global
+*/
+@import './login_global.scss';

@@ -1,0 +1,12 @@
+// @import 'common/scss/variable';
+// @import 'common/scss/breakPoint';
+// @import 'common/scss/filePath';
+
+@import '../../common/scss/common.scss';
+/*
+    실제 스타일 파일
+    mainGlobal: global
+    mainMobile: mobile
+*/
+@import './postGlobal';
+@import './postMobile';

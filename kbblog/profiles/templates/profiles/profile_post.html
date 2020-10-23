@@ -1,0 +1,63 @@
+{% extends "profiles/base.html" %}
+{% load static %}
+{% block content %}
+<div class="post-posting-section">
+    <div class="posting">
+        <p class="posting__title">최근 게시물</p>
+        <ul class="posting__recently-list">
+            {% for post in recentlyPostList %}
+                <li class="posting__recently-item">
+                    <a href="/profiles/post/{{post.post_num}}" class="posting__recently-item-inner">
+                        <span class="posting__recently-item-info">
+                            <span class="posting__recently-item-date">{{post.post_date | date:"Y-m-d H:i"}}</span>
+                            <span class="posting__recently-item-date">{{post.post_date | date:"Y-m-d H:i"}}</span>
+                        </span>
+                        <span class="posting__recently-item-img">
+                            <img src="" alt="이미지">
+                        </span>
+                        <span class="posting__recently-item-text-wrap">
+                            <span class="posting__recently-item-title">{{post.post_title}}</span>
+                            <span class="posting__recently-item-desc">{{post.post_content | striptags}}</span>
+                            
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="posting">
+        <p class="posting__title">게시물 목록</p>
+        <ul class="posting__list">
+            {% for post in postList %}
+                <li class="posting__item">
+                    <a href="/profiles/post/{{post.post_num}}" class="posting__item-inner">
+                        <span class="posting__item-info">
+                            <span class="posting__item-date">{{post.date}}</span>
+                            <span class="posting__item-date">{{post.date}}</span>
+                        </span>
+                        <span class="posting__item-img">
+                            <img src="" alt="이미지">
+                        </span>
+                        <span class="posting__item-text-wrap">
+                            <span class="posting__item-title">{{post.title}}</span>
+                            <span class="posting__item-desc">{{post.desc}}</span>
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="posting__pagination">
+            <a href="/profiles/post?page=1" class="posting__pagination-anchor posting__pagination-anchor--arrow posting__pagination-anchor--prev"><</a>
+            {% for page_range in postPage %}
+                <a href="/profiles/post?page={{forloop.counter}}" class="posting__pagination-anchor">{{forloop.counter}}</a>
+            {% endfor %}
+            <a href="/profiles/post?page={{ postPage|length }}" class="posting__pagination-anchor posting__pagination-anchor--arrow posting__pagination-anchor--next">></a>
+        </div>
+        <div class="posting__anchor-wrap">
+            {% if user.is_staff %}
+            <a href="/profiles/post/write" eclass="posting__anchor">글쓰기</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
