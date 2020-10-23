@@ -1,18 +1,18 @@
 # secret data
-.secrets.json
-.db_cnf.json
+secrets.json
+db_cnf.json
 .static_root/
 
 # IDE settings
-.settings.json
+settings.json
 
 # modules
 node_modules/
 
 # DB model
-./kbblog/profiles/migrations/*
+/kbblog/profiles/migrations/*
 
 # package
-.package-lock.json
-.yarn.lock
-.Pipfile.lock
+package-lock.json
+yarn.lock
+Pipfile.lock
