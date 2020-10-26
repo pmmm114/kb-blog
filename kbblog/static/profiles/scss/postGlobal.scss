@@ -196,3 +196,21 @@
         padding: 30px;
     }
 }
+
+.posting-write-card {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 20px;
+    &__title {
+        display: inline-block;
+        width: 100%;
+    }
+    &__content {
+        display: inline-block;
+        width: 100%;
+    }
+    &__input {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #333;
+    }
+}
