@@ -44,5 +44,18 @@
             padding: 5px 15px;
             text-transform: uppercase;
         }
+        &__social-login {
+            margin-top: 20px;
+
+            a {
+                color: #{$font-black-2};
+                text-decoration: none;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.23);
+                border-radius: 4px;
+                background-color: #fff;
+                padding: 5px 15px;
+            }
+        }
     }
 }

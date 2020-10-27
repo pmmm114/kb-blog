@@ -142,11 +142,13 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 
 .transition-input-wrap { position: relative; }
 
-.transition-label { position: absolute; top: 0; left: 0; transform: translate(15px, 8px) scale(1); }
-
-.transition-input { height: 40px; transition: border-color 250ms; padding: 15px; }
+.transition-input { height: 40px; transition: border-color 250ms; padding: 0 15px; }
 
 .transition-input:hover { border-color: black; }
+
+.transition-input:focus + .transition-label { transform: translate(15px, -7px) scale(0.8); }
+
+.transition-label { position: absolute; top: 0; left: 0; transition: transform 250ms; transform: translate(15px, 8px) scale(1); background-color: #fff; }
 
 .common-card { border-radius: 4px; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
 
@@ -168,5 +170,9 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 .login-card__input-wrap + .login-card__input-wrap { margin-top: 15px; }
 
 .login-card__submit { width: 100%; border: 1px solid rgba(0, 0, 0, 0.23); border-radius: 4px; background-color: #fff; padding: 5px 15px; text-transform: uppercase; }
+
+.login-card__social-login { margin-top: 20px; }
+
+.login-card__social-login a { color: #000; text-decoration: none; width: 100%; border: 1px solid rgba(0, 0, 0, 0.23); border-radius: 4px; background-color: #fff; padding: 5px 15px; }
 
 /*# sourceMappingURL=login.css.map */
