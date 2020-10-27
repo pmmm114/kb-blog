@@ -146,7 +146,7 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 
 .transition-input:hover { border-color: black; }
 
-.transition-input:focus + .transition-label { transform: translate(15px, -7px) scale(0.8); }
+.transition-input:value + .transition-label { transform: translate(15px, -7px) scale(0.8); }
 
 .transition-label { position: absolute; top: 0; left: 0; transition: transform 250ms; transform: translate(15px, 8px) scale(1); background-color: #fff; }
 

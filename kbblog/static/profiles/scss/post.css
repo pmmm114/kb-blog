@@ -211,19 +211,21 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 
 .posting-detail-card { background-color: rgba(0, 0, 0, 0.02); }
 
-.posting-detail-card__title { font-size: 24px; }
+.posting-detail-card__title { font-size: 24px; font-weight: bold; }
 
-.posting-detail-card__info { margin-top: 12px; font-size: 0; }
+.posting-detail-card__info { margin-top: 30px; font-size: 0; }
 
 .posting-detail-card__info-wrap { padding: 30px 30px; }
 
 .posting-detail-card__info-text { position: relative; display: inline-block; font-size: 16px; }
 
-.posting-detail-card__info-text + .posting-detail-card__info-text { margin-left: 12px; padding-left: 12px; }
+.posting-detail-card__info-text + .posting-detail-card__info-text { margin-left: 12px; padding-left: 13px; }
 
 .posting-detail-card__info-text + .posting-detail-card__info-text:before { position: absolute; display: inline-block; content: ''; background-color: #333; left: 0; height: 16px; width: 1px; }
 
-.posting-detail-card__cont { margin-top: 30px; padding: 30px; }
+.posting-detail-card__info-text--name { font-weight: bold; }
+
+.posting-detail-card__cont { margin-top: 30px; padding: 0 30px 30px 30px; }
 
 .posting-write-card { background-color: rgba(0, 0, 0, 0.02); padding: 20px; }
 

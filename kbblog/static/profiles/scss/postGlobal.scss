@@ -164,9 +164,10 @@
     background-color: rgba(0, 0, 0, 0.02);
     &__title {
         font-size: 24px;
+        font-weight: bold;
     }
     &__info {
-        margin-top: 12px;
+        margin-top: 30px;
         font-size: 0;
         &-wrap {
             padding: 30px 30px;
@@ -178,7 +179,7 @@
             font-size: 16px;
             & + #{$posting-detail-card}__info-text {
                 margin-left: 12px;
-                padding-left: 12px;
+                padding-left: 13px;
                 &:before {
                     position: absolute;
                     display: inline-block;
@@ -189,11 +190,15 @@
                     width: 1px;
                 }
             }
+
+            &--name {
+                font-weight: bold;
+            }
         }
     }
     &__cont {
         margin-top: 30px;
-        padding: 30px;
+        padding: 0 30px 30px 30px;
     }
 }
 

@@ -22,8 +22,9 @@ class LoginForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({'class': 'transition-input login-card__input login-card__input--id'})
+        self.fields['username'].widget.attrs.update({
+            'class': 'transition-input login-card__input login-card__input--id',
+        })
         self.fields['password'].widget.attrs.update({
             'class': 'transition-input login-card__input login-card__input--pw',
-            'type': 'password'
         })
