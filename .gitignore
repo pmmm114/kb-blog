@@ -16,3 +16,7 @@ kbblog/profiles/migrations/*
 package-lock.json
 yarn.lock
 Pipfile.lock
+
+# css
+*.css
+*.css.map

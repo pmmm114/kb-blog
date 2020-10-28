@@ -5,9 +5,16 @@
     <div>
         <form action="" method="POST">
             {% csrf_token %}
-            {{ form.media }}
-            {{ form }}
-            <input type="submit" name="post_submit" value="save"> 
+            <div class="posting-write-card common-card">
+                <div class="posting-write-card__title">
+                    {{form.post_title}}
+                </div>
+                <div class="posting-write-card__content">
+                    {{form.media}}
+                    {{form.post_content}}
+                </div>
+            </div>
+            <button type="submit" name="post_submit">글쓰기</button> 
         </form>
     </div>
 </div>

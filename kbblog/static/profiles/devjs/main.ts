@@ -23,18 +23,23 @@ import ScrollAnimation from './scrollAnimator.ts';
 
 (() => {
   const blog = (() => {
-    const getElementByClass = (className: string): Element => document.getElementsByClassName(className)[0];
     // const getElementById = (id: string): HTMLElement => document.getElementById(id);
     const getQuerySelector = (selector: string): Element => document.querySelector(selector);
+    const getQuerySelectorAll = (selector: string): NodeListOf<Element> => document.querySelectorAll(selector);
     const getSelectorString = function getSelectorStringFunc(selector: string): string {
       return selector.substring(1, selector.length);
     };
     const setAddEventListener = function setAddEventListenerFunc(getElementFunc: Function, selector: string, eventType: string, objType: any, listener: Function) {
-      let $element: Element = null;
+      let $elements: NodeListOf<Element> = null;
 
-      $element = getElementFunc(selector);
-      if ($element) {
-        $element.addEventListener(eventType, (e: typeof objType) => { listener(e); });
+      $elements = getElementFunc(selector);
+      if ($elements.length > 0) {
+        const eventNamesArray: Array<string> = eventType.split(',');
+        for (let eventNamesIndex = 0; eventNamesIndex < eventNamesArray.length; eventNamesIndex += 1) {
+          for (let index = 0; index < $elements.length; index += 1) {
+            $elements[index].addEventListener(eventNamesArray[eventNamesIndex], (e: typeof objType) => { listener(e); });
+          }
+        }
       }
     };
 
@@ -54,7 +59,13 @@ import ScrollAnimation from './scrollAnimator.ts';
           },
         },
       },
+      input: {
+        self: '.transition-input',
+      },
       cssClass: {
+        input: {
+          active: 'transition-input--active',
+        },
         popup: {
           active: 'common-popup--active',
         },
@@ -85,7 +96,7 @@ import ScrollAnimation from './scrollAnimator.ts';
       bindEvents(): void {
         const _ = this;
 
-        setAddEventListener(getElementByClass, getSelectorString(defClass.common.closeBtn), 'click', MouseEvent, _.closeCommonPopup);
+        setAddEventListener(getQuerySelectorAll, defClass.common.closeBtn, 'click', MouseEvent, _.closeCommonPopup);
         // getElementByClass(getSelectorString(defClass.common.closeBtn)).addEventListener('click', (e: MouseEvent) => { _.closeCommonPopup(e); });
         // getQuerySelector('[data-popup-target]').addEventListener('click', (e: MouseEvent) => { _.openCommonPopup(e); });
       },
@@ -118,6 +129,28 @@ import ScrollAnimation from './scrollAnimator.ts';
         } else {
           getQuerySelector(defClass.common.dimmed).classList.remove(getSelectorString(defClass.common.dimmedOn));
           getQuerySelector(defClass.common.dimmed).style.display = 'none';
+        }
+      },
+    };
+
+    const commonTransition = {
+      init(): void {
+        const _ = this;
+
+        _.bindEvents();
+      },
+      bindEvents(): void {
+        const _ = this;
+
+        setAddEventListener(getQuerySelectorAll, defClass.input.self, 'focus,blur,change', Event, _.transitionEvent);
+      },
+      transitionEvent(e: Event): void {
+        if (e.type === 'focus') {
+          e.target.classList.add('transition-input--active');
+        } else if (e.target.value) {
+          e.target.classList.add('transition-input--active');
+        } else {
+          e.target.classList.remove('transition-input--active');
         }
       },
     };
@@ -173,6 +206,7 @@ import ScrollAnimation from './scrollAnimator.ts';
       commonPopup.init();
       interactionManager.init();
       scrollAnimatorManager.init();
+      commonTransition.init();
     };
 
     const reInit = (): void => {

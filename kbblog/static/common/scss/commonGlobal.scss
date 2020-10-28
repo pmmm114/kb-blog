@@ -450,27 +450,28 @@ button[transition-init=transparent] {
 	&-input-wrap {
 		position: relative;
 	}
-
+	&-input {
+		height: 40px;
+		transition: border-color 250ms;
+		padding: 0 15px;
+		
+		&--active {
+			& + .transition-label {
+				transform: translate(15px, -7px) scale(0.8);
+			}
+		}
+		
+		&:hover {
+			border-color: rgba(0, 0, 0, 1);
+		}
+	}
 	&-label {
 		position: absolute;
 		top: 0;
 		left: 0;
+		transition: transform 250ms;
 		transform: translate(15px, 8px) scale(1);
-
-		&--focus {
-
-		}
-	}
-	&-input {
-		height: 40px;
-		transition: border-color 250ms;
-		padding: 15px;
-	
-		&:hover {
-			border-color: rgba(0, 0, 0, 1);
-		}
-		&:focus {
-		}
+		background-color: #{$common-white-1};
 	}
 }
 
