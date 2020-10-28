@@ -12,6 +12,13 @@ class PostClientForm(forms.ModelForm):
         model = Post
         fields = ['post_title', 'post_content']
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['post_title'].widget.attrs.update({
+            'class': 'posting-write-card__input posting-write-card__input--title',
+            'placeholder': 'title'
+        })
+
 class LoginForm(forms.ModelForm):
     class Meta:
         model = User

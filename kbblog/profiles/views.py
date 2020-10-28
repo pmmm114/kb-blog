@@ -62,7 +62,7 @@ class PostDetailView(View):
         post_detail_model = post_detail_object['post_qs']
         user_about_post_model = post_detail_object['user_about_post_qs']
 
-        author = (user_about_post_model.first_name is not None and user_about_post_model.last_name is not None) if user_about_post_model.first_name + user_about_post_model.last_name else user_about_post_model.username
+        author = (user_about_post_model.username) if (user_about_post_model.first_name is not None and user_about_post_model.last_name is not None) else (user_about_post_model.first_name + user_about_post_model.last_name) 
 
         rendered = render_to_string(PostDetailView.template, {
             'cssFiles': [
@@ -134,7 +134,8 @@ class Loginview(View):
 
         if user is not None:
             login(request, user)
-            return redirect('/profiles')
+            url =  '/profiles' if (request.GET.get('next', None) is None) else request.GET.get('next', None)
+            return redirect(url)
         else:
             rendered = render_to_string(Loginview.template, {
                 'cssFiles': [
