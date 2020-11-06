@@ -10,7 +10,10 @@
     <meta name="author" content="Kangbok Lee">
     <title>kblee's blog</title>
     {% for css in cssFiles %}
-        <link href="{% sass_src css %}" rel="stylesheet" type="text/css" />
+        <link href="{% sass_src css %}" rel="stylesheet"/>
+    {% endfor %}
+    {% for css in cdn_link_css %}
+        <link href="{{css}}" rel="stylesheet"/>
     {% endfor %}
 </head>
 <body>
@@ -91,6 +94,10 @@
             });
         }
     </script>
+    {% for js in cdn_link_js %}
+        <script src="{{js}}"></script>
+    {% endfor %}
+    <script src="{% static 'common/js/common.js' %}"></script>
     <script src="{% static 'profiles/js/profiles.js' %}"></script>
 </body>
 </html>

@@ -109,6 +109,13 @@ class PostWriteView(View):
             'cssFiles': [
                 'profiles/scss/post.scss',
             ],
+            'cdn_link_css': [
+                'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css',
+                'https://uicdn.toast.com/editor/latest/toastui-editor.min.css',
+            ],
+            'cdn_link_js': [
+                'https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js',
+            ],
             'form': form
         }, request)
 
