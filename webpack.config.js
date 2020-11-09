@@ -6,6 +6,7 @@ const projectPath = '/kbblog';
 module.exports = {
     entry: {
         profiles: ['@babel/polyfill'].concat(glob.sync('./kbblog/static/profiles/devjs/index.ts')),
+        common: ['@babel/polyfill'].concat(glob.sync('./kbblog/static/common/devjs/index.ts')),
     },
     output: {
         filename: '[name]/js/[name].js',

@@ -8,12 +8,12 @@
                 {{ post.post_title }}
             </p>
             <p class="posting-detail-card__info">
-                <span class="posting-detail-card__info-text">{{ post.post_author }}</span>
+                <span class="posting-detail-card__info-text posting-detail-card__info-text--name">{{ post.post_author }}</span>
                 <span class="posting-detail-card__info-text">{{ post.post_date | date:"Y-m-d H:i" }}</span>
             </p>
         </div>
         <div class="posting-detail-card__cont">
-            {{ post.post_content | striptags }}
+            {{ post.post_content|safe }}
         </div>
     </div>
     <div>

@@ -10,7 +10,10 @@
     <meta name="author" content="Kangbok Lee">
     <title>kblee's blog</title>
     {% for css in cssFiles %}
-        <link href="{% sass_src css %}" rel="stylesheet" type="text/css" />
+        <link href="{% sass_src css %}" rel="stylesheet"/>
+    {% endfor %}
+    {% for css in cdn_link_css %}
+        <link href="{{css}}" rel="stylesheet"/>
     {% endfor %}
 </head>
 <body>
@@ -27,7 +30,7 @@
                         </li>
                     </ul>
                     <div class="gnb__nav-right">
-                        <!-- <a href="http://github.com/pmmm114" class="gnb__github-logo github-logo" target="_blank">
+                        <a href="http://github.com/pmmm114" class="gnb__github-logo github-logo" target="_blank">
                             <span class="github-icon"></span>
                             <span class="blind">
                                 아이콘 제작자
@@ -36,15 +39,7 @@
                                 </a> from
                                 <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
                             </span>
-                        </a> -->
-                        {% if user.is_authenticated %}
-                        <div>
-                            {{user.username}} 님 <a class="anchor-button login-button normal-button-style uppercase bold" href="/profiles/logout?next={{request.path}}">Logout</a>
-                        </div>
-                        {% else %}
-                            <a class="anchor-button login-button normal-button-style uppercase bold" href="/profiles/login">Login</a>
-                            <!-- <a class="anchor-button login-button normal-button-style uppercase bold" href="{% url 'social:begin' 'google-oauth2' %}?next={{request.path}}">Login</a> -->
-                        {% endif %}
+                        </a>
                     </div>
                     <!-- <div class="gnb__nav-search">
                         <button type="button" class="gnb__nav-search-trigger" data-popup-target="search-popup">
@@ -91,6 +86,13 @@
             });
         }
     </script>
+    {% for js in cdn_link_js %}
+        <script src="{{js}}"></script>
+    {% endfor %}
+    {% for js_file in static_js_files %}
+        <script src="{% static js_file %}"></script>
+    {% endfor %}
+    <script src="{% static 'common/js/common.js' %}"></script>
     <script src="{% static 'profiles/js/profiles.js' %}"></script>
 </body>
 </html>

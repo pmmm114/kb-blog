@@ -16,3 +16,10 @@ kbblog/profiles/migrations/*
 package-lock.json
 yarn.lock
 Pipfile.lock
+
+# css
+*.css
+*.css.map
+
+# local media files
+kbblog/media

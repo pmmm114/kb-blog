@@ -40,7 +40,7 @@
                         </span>
                         <span class="posting__item-text-wrap">
                             <span class="posting__item-title">{{post.title}}</span>
-                            <span class="posting__item-desc">{{post.desc}}</span>
+                            <span class="posting__item-desc">{{post.desc|truncatechars:18}}</span>
                         </span>
                     </a>
                 </li>
@@ -52,11 +52,6 @@
                 <a href="/profiles/post?page={{forloop.counter}}" class="posting__pagination-anchor">{{forloop.counter}}</a>
             {% endfor %}
             <a href="/profiles/post?page={{ postPage|length }}" class="posting__pagination-anchor posting__pagination-anchor--arrow posting__pagination-anchor--next">></a>
-        </div>
-        <div class="posting__anchor-wrap">
-            {% if user.is_staff %}
-            <a href="/profiles/post/write" eclass="posting__anchor">글쓰기</a>
-            {% endif %}
         </div>
     </div>
 </div>

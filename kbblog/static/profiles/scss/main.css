@@ -142,11 +142,13 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 
 .transition-input-wrap { position: relative; }
 
-.transition-label { position: absolute; top: 0; left: 0; transform: translate(15px, 8px) scale(1); }
+.transition-input { height: 40px; transition: border-color 250ms; padding: 0 15px; }
 
-.transition-input { height: 40px; transition: border-color 250ms; padding: 15px; }
+.transition-input--active + .transition-label { transform: translate(15px, -7px) scale(0.8); }
 
 .transition-input:hover { border-color: black; }
+
+.transition-label { position: absolute; top: 0; left: 0; transition: transform 250ms; transform: translate(15px, 8px) scale(1); background-color: #fff; }
 
 .common-card { border-radius: 4px; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
 

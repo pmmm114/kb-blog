@@ -23,7 +23,7 @@ from django.urls import include, path, re_path
 
 from .views import indexView
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView 
 
 urlpatterns = [
     # social auth url
