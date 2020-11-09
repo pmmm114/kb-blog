@@ -200,6 +200,12 @@
         margin-top: 30px;
         padding: 0 30px 30px 30px;
     }
+    img {
+        max-height: 100vh;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
 }
 
 .posting-write-card {
@@ -217,5 +223,11 @@
         width: 100%;
         border: 0;
         border-bottom: 2px solid #333;
+        box-sizing: border-box;
+
+        &--title {
+            background-color: transparent;
+            outline: none;
+        }
     }
 }

@@ -109,7 +109,14 @@ class PostWriteView(View):
             'cssFiles': [
                 'profiles/scss/post.scss',
             ],
-            'form': form
+            'cdn_link_js': [
+                "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+            ],
+            'static_js_files': [
+                "ckeditor/ckeditor-init.js",
+                "ckeditor/ckeditor/ckeditor.js"
+            ],
+            'form': form,
         }, request)
 
         return HttpResponse(rendered)

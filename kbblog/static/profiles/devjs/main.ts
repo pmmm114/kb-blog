@@ -1,48 +1,11 @@
 import { gsap, ScrollTrigger } from 'gsap/all';
 import ScrollAnimation from './scrollAnimator.ts';
-
-// msMatchesSelector
-((): void => {
-  if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector
-                || Element.prototype.webkitMatchesSelector;
-  }
-
-  if (!Element.prototype.closest) {
-    Element.prototype.closest = function closest(s) {
-      let el = this;
-
-      do {
-        if (el.matches(s)) return el;
-        el = el.parentElement || el.parentNode;
-      } while (el !== null && el.nodeType === 1);
-      return null;
-    };
-  }
-})();
+import {
+  getQuerySelector, getQuerySelectorAll, getSelectorString, setAddEventListener,
+} from '../../common/function/selectorHelper.ts';
 
 (() => {
   const blog = (() => {
-    // const getElementById = (id: string): HTMLElement => document.getElementById(id);
-    const getQuerySelector = (selector: string): Element => document.querySelector(selector);
-    const getQuerySelectorAll = (selector: string): NodeListOf<Element> => document.querySelectorAll(selector);
-    const getSelectorString = function getSelectorStringFunc(selector: string): string {
-      return selector.substring(1, selector.length);
-    };
-    const setAddEventListener = function setAddEventListenerFunc(getElementFunc: Function, selector: string, eventType: string, objType: any, listener: Function) {
-      let $elements: NodeListOf<Element> = null;
-
-      $elements = getElementFunc(selector);
-      if ($elements.length > 0) {
-        const eventNamesArray: Array<string> = eventType.split(',');
-        for (let eventNamesIndex = 0; eventNamesIndex < eventNamesArray.length; eventNamesIndex += 1) {
-          for (let index = 0; index < $elements.length; index += 1) {
-            $elements[index].addEventListener(eventNamesArray[eventNamesIndex], (e: typeof objType) => { listener(e); });
-          }
-        }
-      }
-    };
-
     const defClass = {
       common: {
         popup: '.common-popup',
@@ -182,7 +145,6 @@ import ScrollAnimation from './scrollAnimator.ts';
       },
       reInit(): void {
       },
-
     };
 
     const scrollAnimatorManager = {

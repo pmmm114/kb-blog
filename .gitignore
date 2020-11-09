@@ -20,3 +20,6 @@ Pipfile.lock
 # css
 *.css
 *.css.map
+
+# local media files
+kbblog/media
