@@ -227,6 +227,8 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 
 .posting-detail-card__cont { margin-top: 30px; padding: 0 30px 30px 30px; }
 
+.posting-detail-card img { max-height: 100vh; max-width: 100%; width: auto; height: auto; }
+
 .posting-write-card { background-color: rgba(0, 0, 0, 0.02); padding: 20px; }
 
 .posting-write-card__title { display: inline-block; width: 100%; }
@@ -234,5 +236,7 @@ button[transition-init=transparent]:hover { background-color: rgba(0, 0, 0, 0.04
 .posting-write-card__content { display: inline-block; width: 100%; }
 
 .posting-write-card__input { width: 100%; border: 0; border-bottom: 2px solid #333; box-sizing: border-box; }
+
+.posting-write-card__input--title { background-color: transparent; outline: none; }
 
 /*# sourceMappingURL=post.css.map */

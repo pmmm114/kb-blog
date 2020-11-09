@@ -7,7 +7,14 @@
             {% csrf_token %}
             
             <div class="posting-write-card common-card">
-                <div id="editor"></div>
+                <div class="posting-write-card__title">	                
+                    {{form.post_title}}	
+                </div>	
+                <div class="posting-write-card__content">	
+                    <!-- {{form.media}}	 -->
+                    {{ form.post_content }}
+                    <!-- {{form.post_content}}	 -->
+                </div>
             </div>
             <button type="submit" name="post_submit">글쓰기</button> 
         </form>

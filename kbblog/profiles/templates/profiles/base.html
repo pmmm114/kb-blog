@@ -97,6 +97,9 @@
     {% for js in cdn_link_js %}
         <script src="{{js}}"></script>
     {% endfor %}
+    {% for js_file in static_js_files %}
+        <script src="{% static js_file %}"></script>
+    {% endfor %}
     <script src="{% static 'common/js/common.js' %}"></script>
     <script src="{% static 'profiles/js/profiles.js' %}"></script>
 </body>

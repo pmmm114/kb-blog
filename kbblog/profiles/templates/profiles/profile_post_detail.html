@@ -13,7 +13,7 @@
             </p>
         </div>
         <div class="posting-detail-card__cont">
-            {{ post.post_content | striptags }}
+            {{ post.post_content|safe }}
         </div>
     </div>
     <div>

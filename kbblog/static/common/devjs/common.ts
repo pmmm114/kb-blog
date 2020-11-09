@@ -19,19 +19,19 @@
 })();
 
 (() => {
-  const common = (() => {
-    const defParams = {
-      input: {
-        self: '.transition-input',
-      },
-      cssClass: {
-        input: {
-          active: 'transition-input--active',
-        },
-      },
-    };
+  // const common = (() => {
+  //   const defParams = {
+  //     input: {
+  //       self: '.transition-input',
+  //     },
+  //     cssClass: {
+  //       input: {
+  //         active: 'transition-input--active',
+  //       },
+  //     },
+  //   };
 
-    const transition = {
-    };
-  })();
+  //   const transition = {
+  //   };
+  // })();
 })();
