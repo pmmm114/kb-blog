@@ -30,7 +30,7 @@
                         </li>
                     </ul>
                     <div class="gnb__nav-right">
-                        <!-- <a href="http://github.com/pmmm114" class="gnb__github-logo github-logo" target="_blank">
+                        <a href="http://github.com/pmmm114" class="gnb__github-logo github-logo" target="_blank">
                             <span class="github-icon"></span>
                             <span class="blind">
                                 아이콘 제작자
@@ -39,15 +39,7 @@
                                 </a> from
                                 <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
                             </span>
-                        </a> -->
-                        {% if user.is_authenticated %}
-                        <div>
-                            {{user.username}} 님 <a class="anchor-button login-button normal-button-style uppercase bold" href="/profiles/logout?next={{request.path}}">Logout</a>
-                        </div>
-                        {% else %}
-                            <a class="anchor-button login-button normal-button-style uppercase bold" href="/profiles/login">Login</a>
-                            <!-- <a class="anchor-button login-button normal-button-style uppercase bold" href="{% url 'social:begin' 'google-oauth2' %}?next={{request.path}}">Login</a> -->
-                        {% endif %}
+                        </a>
                     </div>
                     <!-- <div class="gnb__nav-search">
                         <button type="button" class="gnb__nav-search-trigger" data-popup-target="search-popup">

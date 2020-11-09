@@ -53,11 +53,6 @@
             {% endfor %}
             <a href="/profiles/post?page={{ postPage|length }}" class="posting__pagination-anchor posting__pagination-anchor--arrow posting__pagination-anchor--next">></a>
         </div>
-        <div class="posting__anchor-wrap">
-            {% if user.is_staff %}
-            <a href="/profiles/post/write" eclass="posting__anchor">글쓰기</a>
-            {% endif %}
-        </div>
     </div>
 </div>
 {% endblock %}
