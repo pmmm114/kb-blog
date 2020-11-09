@@ -69,8 +69,9 @@ INSTALLED_APPS = [
     'social_django',
     # sass processor
     'sass_processor',
-    # editor
-    'ckeditor'
+    # editor with images uploader
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -195,9 +196,20 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 # SOCIAL_AUTH_SESSION_EXPIRATION = True
-SESSION_COOKIE_AGE = 300
+SESSION_COOKIE_AGE = 3000
 
-#user model
+# user model
 AUTH_USER_MODEL = 'profiles.User'
 
 LOGIN_URL = '/profiles/login'
+
+# media url
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
+
+# editor config
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_UPLOAD_PATH = "post/"
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+

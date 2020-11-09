@@ -23,3 +23,4 @@ makemigrations = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py m
 migrate = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py migrate"
 reset = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py migrate --fake profiles zero"
 showmigrations = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py showmigrations"
+sqlmigrate = "python3 /mnt/c/Users/pmmm1/personal/kb-blog/kbblog/manage.py sqlmigrate"
