@@ -11,7 +11,7 @@ urlpatterns = [
     path('', MainViewClass.as_view(), name='index'),
     path('post', PostListView.as_view(), name='post_list'),
     path('post/<int:post_id>', PostDetailView.as_view(), name='post_detail'),
-    path('post/write', PostWriteView.as_view(), name='post_detail'),
-    path('logout', LogoutView.as_view(), name='logout_view'),
-    path('login', Loginview.as_view(), name='login')
+    # path('post/write', PostWriteView.as_view(), name='post_detail'),
+    # path('logout', LogoutView.as_view(), name='logout_view'),
+    # path('login', Loginview.as_view(), name='login')
 ]
