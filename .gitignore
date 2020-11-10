@@ -1,6 +1,8 @@
 # secret data
 secrets.json
 db_cnf.json
+
+# production static files
 .static_root/
 
 # IDE settings

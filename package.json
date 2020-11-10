@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --mode=development",
-    "serve": "npx webpack --mode=production",
+    "build": "webpack --mode=development",
+    "serve": "webpack --mode=production",
     "start:dev": "webpack-dev-server --watch"
   },
   "author": "Kangbok Lee",

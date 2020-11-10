@@ -5,12 +5,12 @@ const projectPath = '/kbblog';
 
 module.exports = {
     entry: {
-        profiles: ['@babel/polyfill'].concat(glob.sync('./kbblog/static/profiles/devjs/index.ts')),
-        common: ['@babel/polyfill'].concat(glob.sync('./kbblog/static/common/devjs/index.ts')),
+        profiles: ['./kbblog/static/profiles/devjs/index.ts'],
+        common: ['./kbblog/static/common/devjs/index.ts'],
     },
     output: {
         filename: '[name]/js/[name].js',
-        path: path.resolve(__dirname, projectPath + '/static'),
+        path: __dirname + projectPath + '/static',
         publicPath: '/static',
     },
     module: {
