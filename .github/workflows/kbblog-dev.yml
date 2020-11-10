@@ -1,0 +1,35 @@
+name: KBblog Dev CI
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev.front-end, dev.backend ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+        python-version: [3.5, 3.6, 3.7]
+
+    steps:
+      - name: checkout dev branch
+        uses: actions/checkout@dev
+
+      - name: Install front-end dependencies
+        run: yarn install
+        
+      - name: Set up pyton ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          
+      - name: Build static files
+        run: |
+          pipenv install
+          pipenv run collectstatic
