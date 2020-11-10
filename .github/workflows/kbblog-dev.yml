@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: checkout dev branch
-        uses: actions/checkout@dev
+        uses: actions/checkout@v2
 
       - name: Install front-end dependencies
         run: yarn install
