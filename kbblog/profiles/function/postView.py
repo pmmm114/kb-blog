@@ -28,7 +28,7 @@ def get_recently_post(index, number):
         return [] 
 
 def post_calc_pagenator(current_page):
-    qs = get_recently_post('post_date', 6)
+    qs = get_recently_post('post_date', 4)
 
     recently_post_list = qs.values('post_num', 'author_id', 'post_title', 'post_content', 'post_date')
     

@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os, json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 
 
@@ -31,9 +31,6 @@ SECRET_KEY = secrets_in_file['SECRET_KEY']
 # SOCIAL AUTH KEY
 GOOGLE_KEY = secrets_in_file['GOOGLE_KEY']
 GOOGLE_SECRET = secrets_in_file['GOOGLE_SECRET']
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 LOGGING = {
     'version': 1,
@@ -65,8 +62,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # addintional app
     'profiles.apps.ProfilesConfig',
-    # social_auth
-    'social_django',
     # sass processor
     'sass_processor',
     # editor with images uploader
@@ -164,20 +159,7 @@ TIME_ZONE = 'Asia/Seoul'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
-
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
 
 # Sass Compiler Parameter
 SASS_PRECISION = 8
@@ -190,22 +172,16 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_KEY
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
+# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_KEY
+# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
 
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 # SOCIAL_AUTH_SESSION_EXPIRATION = True
 SESSION_COOKIE_AGE = 3000
 
 # user model
 AUTH_USER_MODEL = 'profiles.User'
-
-LOGIN_URL = '/profiles/login'
-
-# media url
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/'
 
 # editor config
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
